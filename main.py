@@ -19,7 +19,14 @@ def encode(password):
 
 
 def decode(password):
-    return "(Decode is work in progress!)"
+    p = str(encode(password))
+    s = ""
+    for num in p:
+        new = int(num) - 3
+        if new < 0:
+            new = new + 10
+        s += str(new)
+    return s
 
 
 def main():
